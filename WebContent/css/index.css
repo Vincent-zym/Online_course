@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+.top1{
+	width: 100%;
+	height: 50px;
+	background: #fafafa;
+}
+.top1_1{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	float: left;
+	text-indent: 30px;/*缩进30px*/
+}
+.top1_2{
+	width: 20%;
+	height: 100%;
+	float: left;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+.zhong{
+	width: 1200px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+.notice{
+	border-radius: 15px;/*边框四角圆*/
+	width: 1198px;
+	height: 650px;
+	border: 2px solid #aaa;
+	overflow: hidden;/*溢出隐藏*/
+}
+.notice_tit{
+	height: 40px;
+	position: relative;/*位置相对*/
+	background: #f7f7f7;
+}
+
+.notice_tit ul{
+	position: absolute;/*位置绝对*/
+	width: 1200px;
+	left: -1px;
+}
+.notice_tit li{
+	float: left;
+	width: 238px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 17px;
+	font-weight: 500;
+	text-align: center;
+	overflow: hidden;
+	background: #fff;
+	padding: 0 1px;
+	background: #d296ee;
+	border-bottom: 1px solid #eee;
+}
+
+.notice_tit li.select{
+	background: #fff;
+	border-bottom-color: #fff;
+	border-left:  1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 0;
+	font-weight: bolder;
+}
+
+.notice li a:link,.notice_tit li a:visited{
+	text-decoration: none;
+	color: #000;
+}
+
+.notice li a:hover{
+	color: #f90;
+}
+
+.notice_con .mod{
+	margin: 10px 6px;
+}
+
+.notice_con .mod ul li{
+	float: left;
+	width: 143px;
+	height: 600px;
+	overflow: hidden;
+}
