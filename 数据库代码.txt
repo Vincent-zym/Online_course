@@ -1,0 +1,50 @@
+// student表  （学生表）
+
+CREATE TABLE `student` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `stu_id` int(10) unsigned NOT NULL COMMENT '学号',
+  `stu_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '姓名',
+  `stu_pwd` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
+  `stu_sex` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '性别',
+  `stu_grade` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '年级',
+  `stu_tel` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '手机',
+  `stu_major` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '专业',
+  `stu_place` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '籍贯',
+  `stu_nation` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '民族',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `stu_id` (`stu_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+
+//manager表  （管理员表）
+
+CREATE TABLE `manager` (
+  `adm_id` int(10) unsigned NOT NULL COMMENT '管理员编号',
+  `adm_tel` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '管理员电话',
+  `adm_pwd` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '管理员密码',
+  PRIMARY KEY (`adm_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//course表  （课程表）
+
+CREATE TABLE `course` (
+  `course_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '课程号',
+  `course_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '课程名',
+  `course_tea` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '代课老师',
+  `course_hour` int(11) NOT NULL COMMENT '课时',
+  `course_mark` float NOT NULL COMMENT '学分',
+  `course_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '上课时间',
+  `course_place` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '上课地点',
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+
+//选课表
+
+CREATE TABLE `choice` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `stu_id` int(10) unsigned NOT NULL COMMENT '学号',
+  `course_id` int(10) unsigned NOT NULL COMMENT '课程号',
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `course_id` (`course_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
