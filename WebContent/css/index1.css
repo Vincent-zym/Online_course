@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+.top1 {
+	width: 100%;
+	height: 50px;
+	background: #fafafa;
+}
+
+.top1_1 {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	float: left;
+	text-indent: 30px;
+	/*Ëõ½ø30px*/
+}
+
+.top1_2 {
+	width: 20%;
+	height: 100%;
+	float: left;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+.zhong{
+	width: 80%;
+	height: 300px;
+	margin: 0 auto;
+}
+
+

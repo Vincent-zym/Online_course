@@ -1,0 +1,221 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-image: url(../img/macos.jpg);
+	background-repeat: no-repeat;
+	/*不重复*/
+	background-attachment: scroll;
+	/*跟随移动*/
+}
+
+
+/*上面*/
+
+.top1 {
+	width: 100%;
+	height: 110px;
+}
+
+.top1_1 {
+	width: 80%;
+	height: 100%;
+	float: left;
+	margin: 0 auto;
+}
+
+.top1_2_1{
+	width: 130px;
+	height: 40px;
+	margin-top: 50px;
+	background-color: darkcyan;
+}
+
+.top1_2{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.top1_2 a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+/*中间主体*/
+
+.middle {
+	width: 100%;
+	height: 450px;
+	margin-top: 10px;
+}
+
+.admin1 {
+	width: 100%;
+	height: 40px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 28px;
+	color: white;
+	letter-spacing: 15px;
+	/*字间距设置*/
+}
+
+.middle1 {
+	width: 450px;
+	height: 450px;
+	margin: 0 auto;
+	background: rgb(255, 255, 255);
+	border-radius: 10px 10px 10px 10px;
+	/*圆角*/
+}
+
+.login1_1 {
+	width: 100%;
+	height: 20px;
+}
+
+.login1_2 {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+
+/*注册表单*/
+
+.login1 {
+	width: 400px;
+	height: 290px;
+	margin: 0 auto;
+	display: none;
+}
+
+.login1_1_1 {
+	width: 80px;
+	height: 40px;
+	float: left;
+	line-height: 40px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.text {
+	width: 288px;
+	height: 38px;
+	border: 1px solid #b0b0b0;
+	margin-left: 10px;
+	padding-left: 10px;
+	margin-top: 20px;
+}
+
+.reset {
+	width: 175px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	margin-right: 50px;
+	background-color: rgb(55, 55, 55);
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+	/*阴影*/
+}
+
+.submit {
+	width: 175px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	background-color: rgb(55, 55, 55);
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.login2_2 {
+	width: 400px;
+	height: 290px;
+	/* display: none; */
+	margin: 0 auto;
+}
+
+.login1_2_2 {
+	width: 80px;
+	height: 40px;
+	float: left;
+	line-height: 40px;
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+.text1 {
+	width: 288px;
+	height: 48px;
+	border: 1px solid #d0d0d0;
+	padding-left: 10px;
+	margin-left: 5px;
+	margin-top: 40px;
+}
+
+.login3 {
+	width: 100%;
+	height: 40px;
+	text-align: center;
+}
+
+.login3>a {
+	font-size: 20px;
+	color: #f56600;
+	text-decoration: none;
+}
+
+
+/*底部*/
+
+.xia1_1 {
+	width: 100%;
+	height: 30px;
+	margin-top: 30px;
+}
+
+.xia1_2 {
+	width: 100%;
+	height: 30px;
+}
+
+.xia1_2_1 {
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 50px;
+	text-align: center;
+}
+
+.xia1_2_1>a {
+	color: #cccccc;
+	font-size: 14px;
+	margin-right: 15px;
+	text-decoration: none;
+}
+
+.xia1_2_1>a:hover {
+	color: #f40;
+}
+
+.xia1_3 {
+	width: 100%;
+	height: 50px;
+}
+
+.xia1_3_1 {
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 13px;
+	color: #9c9c9c;
+	line-height: 50px;
+}
