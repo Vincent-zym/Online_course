@@ -6,6 +6,9 @@ public class Course {
 	private String course_tea;
 	private Integer course_hour;
 	private Float course_mark;
+	private String course_term;
+	private String course_node;
+	private String course_week;
 	private String course_time;
 	private String course_place;
 	
@@ -41,6 +44,25 @@ public class Course {
 	}
 	public void setCourse_mark(Float course_mark) {
 		this.course_mark = course_mark;
+	}
+	public String getCourse_term() {
+		return course_term;
+	}
+	public void setCourse_term(String course_term) {
+		this.course_term = course_term;
+	}
+	public String getCourse_node() {
+		return course_node;
+	}
+	public void setCourse_node(String course_node) {
+		this.course_node = course_node;
+	}
+	public String getCourse_week() {
+		return course_week;
+	}
+
+	public void setCourse_week(String course_week) {
+		this.course_week = course_week;
 	}
 	public String getCourse_time() {
 		return course_time;

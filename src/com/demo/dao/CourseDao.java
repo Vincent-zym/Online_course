@@ -30,6 +30,9 @@ public class CourseDao {
 				course.setCourse_tea(rst.getString("course_tea"));
 				course.setCourse_hour(rst.getInt("course_hour"));
 				course.setCourse_mark(rst.getFloat("course_mark"));
+				course.setCourse_term(rst.getString("course_term"));
+				course.setCourse_node(rst.getString("course_node"));
+				course.setCourse_week(rst.getString("course_week"));
 				course.setCourse_time(rst.getString("course_time"));
 				course.setCourse_place(rst.getString("course_place"));
 				courseList.add(course);
@@ -41,8 +44,6 @@ public class CourseDao {
 		}
 		return courseList;
 	}	
-	
-	
 	
 	
 	
@@ -66,6 +67,9 @@ public class CourseDao {
 				course.setCourse_tea(rst.getString("course_tea"));
 				course.setCourse_hour(rst.getInt("course_hour"));
 				course.setCourse_mark(rst.getFloat("course_mark"));
+				course.setCourse_term(rst.getString("course_term"));
+				course.setCourse_node(rst.getString("course_node"));
+				course.setCourse_week(rst.getString("course_week"));
 				course.setCourse_time(rst.getString("course_time"));
 				course.setCourse_place(rst.getString("course_place"));
 				courseList.add(course);
@@ -87,15 +91,18 @@ public class CourseDao {
 		try {
 			conn = JdbcUtils.getConnection();
 			
-			String sql = "insert into course(course_id,course_name,course_tea,course_hour,course_mark,course_time,course_place)values(?,?,?,?,?,?,?);";
+			String sql = "insert into course(course_id,course_name,course_tea,course_hour,course_mark,course_term,course_node,course_week,course_time,course_place)values(?,?,?,?,?,?,?,?,?,?);";
 			pstmt = (PreparedStatement) conn.prepareStatement(sql);
 			pstmt.setInt(1, course.getCourse_id());
 			pstmt.setString(2, course.getCourse_name());
 			pstmt.setString(3, course.getCourse_tea());
 			pstmt.setInt(4, course.getCourse_hour());
 			pstmt.setFloat(5, course.getCourse_mark());
-			pstmt.setString(6, course.getCourse_time());
-			pstmt.setString(7, course.getCourse_place());
+			pstmt.setString(6, course.getCourse_term());
+			pstmt.setString(7, course.getCourse_node());
+			pstmt.setString(8, course.getCourse_week());
+			pstmt.setString(9, course.getCourse_time());
+			pstmt.setString(10, course.getCourse_place());
 			
 			pstmt.executeUpdate();
 			pstmt.close();
@@ -108,7 +115,7 @@ public class CourseDao {
 	//修改课程信息
 	public void updateCourse(Course course) {
 		Connection conn = JdbcUtils.getConnection();
-		String sql = "update course set course_name=?,course_tea=?,course_hour=?,course_mark=?,course_time=?,course_place=? where course_id=?;";
+		String sql = "update course set course_name=?,course_tea=?,course_hour=?,course_mark=?,course_term=?,course_node=?,course_week,course_time=?,course_place=? where course_id=?;";
 		
 		try {
 			PreparedStatement pst = conn.prepareStatement(sql);
@@ -117,9 +124,12 @@ public class CourseDao {
 			pst.setString(2, course.getCourse_tea());
 			pst.setInt(3, course.getCourse_hour());
 			pst.setFloat(4, course.getCourse_mark());
-			pst.setString(5, course.getCourse_time());
-			pst.setString(6, course.getCourse_place());
-			pst.setInt(7, course.getCourse_id());
+			pst.setString(5, course.getCourse_term());
+			pst.setString(6, course.getCourse_node());
+			pst.setString(7, course.getCourse_week());
+			pst.setString(8, course.getCourse_time());
+			pst.setString(9, course.getCourse_place());
+			pst.setInt(10, course.getCourse_id());
 			/*pst.setInt(8, course.getCourse_id());*/
 			
 			pst.executeUpdate();
@@ -161,6 +171,9 @@ public class CourseDao {
 				course.setCourse_tea(rst.getString("course_tea"));
 				course.setCourse_hour(rst.getInt("course_hour"));
 				course.setCourse_mark(rst.getFloat("course_mark"));
+				course.setCourse_term(rst.getString("course_term"));
+				course.setCourse_node(rst.getString("course_node"));
+				course.setCourse_week(rst.getString("course_week"));
 				course.setCourse_time(rst.getString("course_time"));
 				course.setCourse_place(rst.getString("course_place"));
 			}

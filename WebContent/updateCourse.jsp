@@ -72,9 +72,40 @@
 						  <option>3</option>
 						</select>
                     </div>
+                     <div class="form-group">
+                        <label>学期</label>
+                        <select class="form-control" name="course_term" value="${course.course_term }">
+						  <option>第一学期</option>
+						  <option>第二学期</option>
+						  <option>第三学期</option>
+						</select>
+                    </div>
                     <div class="form-group">
+                        <label>节次</label>
+                        <select class="form-control" name="course_node" value="${course.course_node }">
+						  <option>一二节</option>
+						  <option>三四节</option>
+						  <option>五六节</option>
+						  <option>七八节</option>
+						</select>
+                    </div>
+                    <div class="form-group">
+                        <label>周次</label>
+                        <input type="text" class="form-control" name="course_week" value="${course.course_week }">
+                    </div>
+                    <%-- <div class="form-group">
                         <label>上课时间</label>
                         <input type="text" class="form-control" name="course_time" id="course_time" value="${course.course_time }">
+                    </div> --%>
+                    <div class="form-group">
+                        <label>上课时间</label>
+                        <select class="form-control" name="course_time" value="${course.course_time }">
+						  <option>星期一</option>
+						  <option>星期二</option>
+						  <option>星期三</option>
+						  <option>星期四</option>
+						  <option>星期五</option>
+						</select>
                     </div>
                     <div class="form-group">
                         <label>上课地点</label>

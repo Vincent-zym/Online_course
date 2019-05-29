@@ -30,6 +30,9 @@ public class AddCourseServlet extends HttpServlet {
 		String course_tea = req.getParameter("course_tea");
 		int course_hour = Integer.valueOf(req.getParameter("course_hour"));
 		float course_mark = Float.valueOf(req.getParameter("course_mark"));
+		String course_term = req.getParameter("course_term");
+		String course_node = req.getParameter("course_node");
+		String course_week = req.getParameter("course_week");
 		String course_time = req.getParameter("course_time");
 		String course_place = req.getParameter("course_place");
 		
@@ -39,6 +42,9 @@ public class AddCourseServlet extends HttpServlet {
 		course.setCourse_tea(course_tea);
 		course.setCourse_hour(course_hour);
 		course.setCourse_mark(course_mark);
+		course.setCourse_term(course_term);
+		course.setCourse_node(course_node);
+		course.setCourse_week(course_week);
 		course.setCourse_time(course_time);
 		course.setCourse_place(course_place);
 		

@@ -37,7 +37,7 @@ public class SelectDao {
 		
 		try {
 			conn = JdbcUtils.getConnection();
-			String sql = "select course_id,course_name,course_tea,course_time,course_place from course where course_id in (select course_id from choice where stu_id="+stu_id+" );";
+			String sql = "select course_id,course_name,course_tea,course_term,course_node,course_week,course_time,course_place from course where course_id in (select course_id from choice where stu_id="+stu_id+" );";
 			pstmt = (PreparedStatement) conn.prepareStatement(sql);
 			ResultSet rst = pstmt.executeQuery();
 			while(rst.next()) {
@@ -45,6 +45,9 @@ public class SelectDao {
 				course.setCourse_id(rst.getInt("course_id"));
 				course.setCourse_name(rst.getString("course_name"));
 				course.setCourse_tea(rst.getString("course_tea"));
+				course.setCourse_term(rst.getString("course_term"));
+				course.setCourse_node(rst.getString("course_node"));
+				course.setCourse_node(rst.getString("course_week"));
 				course.setCourse_time(rst.getString("course_time"));
 				course.setCourse_place(rst.getString("course_place"));
 				

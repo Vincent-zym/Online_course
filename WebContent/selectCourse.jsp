@@ -59,6 +59,9 @@
                         <td>代课老师</td>
                         <td>课时</td>
                         <td>学分</td>
+                        <td>学期</td>
+                        <td>节次</td>
+                        <td>周次</td>
                         <td>上课时间</td>
                         <td>上课地点</td>
                         <td>操作</td>
@@ -74,6 +77,9 @@
                                 <td>${course.course_tea}</td>
                                 <td>${course.course_hour}</td>
                                 <td>${course.course_mark}</td>
+                                <td>${course.course_term}</td>
+                                <td>${course.course_node}</td>
+                                <td>${course.course_week}</td>
                                 <td>${course.course_time}</td>
                                 <td>${course.course_place}</td>
                                 <td>
